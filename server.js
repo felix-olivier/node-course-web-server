@@ -43,8 +43,16 @@ app.get('/', (req, res) => { // set up handler for http get request. ('url (/=ro
 res.render('home.hbs', {
   pageTitle: 'Home Page',
   welcomeMessage: 'Welcome to my website'
+  });
 });
+
+app.get('/projects', (req, res) => { // set up handler for http get request. ('url (/=root)', function to run on request)
+res.render('projects.hbs', {
+  pageTitle: 'Projects Page',
+  // welcomeMessage: 'Welcome to my website'
+  });
 });
+
 
 app.get('/about', (req, res) => {
   res.render('about.hbs', {
