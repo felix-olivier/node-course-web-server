@@ -4,6 +4,7 @@ const fs = require('fs');
 
 var app = express();
 const maintenanceMode = false;
+const port = process.env.PORT || 3010;
 
 hbs.registerPartials(__dirname + '/views/partials');
 app.set('view engine', 'hbs'); // set express related configurations
@@ -60,6 +61,6 @@ app.get('/bad', (req, res) => {
 });
 
 
-app.listen(3010, () => {
-  console.log('Server is up on port 3010');
+app.listen(port, () => {
+  console.log(`Server is up on port ${port}`);
 });
